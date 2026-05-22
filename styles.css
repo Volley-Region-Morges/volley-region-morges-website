@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #DC143C;
+    --primary-color: #C41C3A;
     --secondary-color: #FFFFFF;
     --text-color: #333;
     --light-bg: #F5F5F5;
     --border-color: #E0E0E0;
-    --accent-red: #C41E3A;
+    --accent-red: #A01830;
 }
 
 * {
@@ -57,7 +57,7 @@ body {
 }
 
 .lang-btn:hover:not(.active) {
-    background: #FFE5EC;
+    background: #F0D5DC;
 }
 
 /* Header */
@@ -127,7 +127,7 @@ section p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #FFE5EC, var(--light-bg));
+    background: linear-gradient(135deg, #F0D5DC, var(--light-bg));
 }
 
 .hero h2 {
@@ -176,7 +176,7 @@ section p {
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(220, 20, 60, 0.2);
+    box-shadow: 0 10px 25px rgba(196, 28, 58, 0.2);
     border-color: var(--accent-red);
 }
 

@@ -3,16 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volley Région Morges - Jeunes</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Volley Région Morges - Association Volleyball Jeunesse Suisse</title>
+    <meta name="description" content="Volley Région Morges est une association de volleyball pour les jeunes dans la région de Morges, Suisse. Nous proposons des équipes U12, U14, U16 et U18 avec entraînement compétitif pour développer les talents du volleyball.">
+    <meta name="keywords" content="volleyball, jeunesse, Morges, Suisse, association, U12, U14, U16, U18, sport, entraînement, compétition">
+    <meta name="author" content="Volley Région Morges">
+    <meta name="language" content="French">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="30 days">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Volley Région Morges - Association Volleyball Jeunesse">
+    <meta property="og:description" content="Rejoignez Volley Région Morges pour une expérience de volleyball inoubliable. Association officielle de volleyball pour les jeunes à Morges, Suisse.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://volley-region-morges.github.io/volley-region-morges-website/">
+    <meta property="og:site_name" content="Volley Région Morges">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Volley Région Morges - Association Volleyball Jeunesse">
+    <meta name="twitter:description" content="Association de volleyball pour les jeunes talents de la région de Morges. Équipes U12, U14, U16, U18.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://volley-region-morges.github.io/volley-region-morges-website/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23DC143C'/><circle cx='50' cy='50' r='35' fill='white'/></svg>">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Volley Région Morges",
+        "description": "Association de volleyball pour les jeunes joueurs dans la région de Morges, Suisse",
+        "url": "https://volley-region-morges.github.io/volley-region-morges-website/",
+        "email": "info@volleymorges.ch",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Morges",
+            "addressCountry": "CH"
+        },
+        "sameAs": [],
+        "foundingDate": "2025",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "General Inquiries",
+            "email": "info@volleymorges.ch"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Language Switcher -->
     <div class="language-switcher">
-        <button class="lang-btn active" data-lang="fr">FR</button>
-        <button class="lang-btn" data-lang="de">DE</button>
-        <button class="lang-btn" data-lang="it">IT</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="fr" title="Français">FR</button>
+        <button class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="it" title="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" title="English">EN</button>
     </div>
 
     <header>
@@ -22,7 +74,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav role="navigation" aria-label="Navigation principale">
         <div class="container">
             <ul>
                 <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
@@ -33,7 +85,7 @@
         </div>
     </nav>
 
-    <main>
+    <main role="main">
         <section id="accueil" class="hero">
             <div class="container">
                 <h2 data-i18n="hero.title">Bienvenue</h2>
@@ -53,22 +105,22 @@
             <div class="container">
                 <h2 data-i18n="teams.title">Nos Équipes Jeunesse</h2>
                 <div class="team-grid">
-                    <div class="team-card">
+                    <article class="team-card">
                         <h3 data-i18n="teams.u12">U12 Mixte</h3>
                         <p data-i18n="teams.u12desc">Initiation au volleyball pour les plus jeunes</p>
-                    </div>
-                    <div class="team-card">
+                    </article>
+                    <article class="team-card">
                         <h3 data-i18n="teams.u14">U14 Mixte</h3>
                         <p data-i18n="teams.u14desc">Développement des techniques fondamentales</p>
-                    </div>
-                    <div class="team-card">
+                    </article>
+                    <article class="team-card">
                         <h3 data-i18n="teams.u16">U16 Filles & Garçons</h3>
                         <p data-i18n="teams.u16desc">Entraînement compétitif et progression</p>
-                    </div>
-                    <div class="team-card">
+                    </article>
+                    <article class="team-card">
                         <h3 data-i18n="teams.u18">U18 Filles & Garçons</h3>
                         <p data-i18n="teams.u18desc">Préparation aux compétitions régionales</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -82,7 +134,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Volley Région Morges. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
         </div>

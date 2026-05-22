@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #1e40af;
-    --secondary-color: #f97316;
+    --primary-color: #DC143C;
+    --secondary-color: #FFFFFF;
     --text-color: #333;
-    --light-bg: #f8fafc;
-    --border-color: #e2e8f0;
+    --light-bg: #F5F5F5;
+    --border-color: #E0E0E0;
+    --accent-red: #C41E3A;
 }
 
 * {
@@ -24,9 +25,44 @@ body {
     padding: 0 20px;
 }
 
+/* Language Switcher */
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lang-btn {
+    padding: 8px 12px;
+    border: 2px solid var(--primary-color);
+    background: white;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.9em;
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.lang-btn:hover:not(.active) {
+    background: #FFE5EC;
+}
+
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-red));
     color: white;
     padding: 40px 0;
     text-align: center;
@@ -39,7 +75,7 @@ header h1 {
 
 .tagline {
     font-size: 1.2em;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 /* Navigation */
@@ -47,8 +83,8 @@ nav {
     background-color: var(--primary-color);
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 99;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 nav ul {
@@ -63,11 +99,13 @@ nav a {
     color: white;
     text-decoration: none;
     padding: 15px 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
+    background-color: white;
+    color: var(--primary-color);
 }
 
 /* Sections */
@@ -89,16 +127,18 @@ section p {
 
 /* Hero Section */
 .hero {
-    background-color: var(--light-bg);
+    background: linear-gradient(135deg, #FFE5EC, var(--light-bg));
 }
 
 .hero h2 {
     font-size: 3em;
+    color: var(--primary-color);
 }
 
 .hero p {
     font-size: 1.3em;
     text-align: center;
+    color: var(--accent-red);
 }
 
 /* About Section */
@@ -108,7 +148,7 @@ section p {
 
 .about p {
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -127,22 +167,27 @@ section p {
 
 .team-card {
     background: white;
-    border: 2px solid var(--border-color);
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
     padding: 30px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(220, 20, 60, 0.2);
+    border-color: var(--accent-red);
 }
 
 .team-card h3 {
     color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.5em;
+}
+
+.team-card p {
+    color: #666;
 }
 
 /* Contact Section */
@@ -158,10 +203,12 @@ section p {
 .contact a {
     color: var(--primary-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact a:hover {
     text-decoration: underline;
+    color: var(--accent-red);
 }
 
 /* Footer */
@@ -175,6 +222,17 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
     header h1 {
         font-size: 2em;
     }

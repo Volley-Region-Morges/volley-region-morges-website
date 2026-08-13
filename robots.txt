@@ -1,12 +1,3 @@
+# Block all web crawlers from the entire site
 User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-Sitemap: https://volley-region-morges.github.io/volley-region-morges-website/sitemap.xml
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
+Disallow: /
